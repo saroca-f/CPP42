@@ -6,7 +6,7 @@
 /*   By: saroca-f <saroca-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 11:36:04 by saroca-f          #+#    #+#             */
-/*   Updated: 2024/11/22 17:29:10 by saroca-f         ###   ########.fr       */
+/*   Updated: 2025/01/25 18:17:22 by saroca-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,9 +118,9 @@ static bool isDouble(const std::string &input)
 	if (input[i] == '-' || input[i] == '+') {i++;}
 	if (std::count(input.begin(), input.end(), '.') != 1)
 		return (false);
-	for (; i <= (int)input.length(); i++)
+	for (; i < (int)input.length(); i++)
 	{
-		if (std::isdigit(input[i]) && (input[i] != '.'))
+		if (!std::isdigit(input[i]) && (input[i] != '.'))
 			return false;
 	}
 	return (true);
